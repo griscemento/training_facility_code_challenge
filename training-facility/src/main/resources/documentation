@@ -1,0 +1,10 @@
+*How to run the application:
+Run on the terminal: docker compose up --build
+*How to run tests:
+Run the test files in the package tests/service and tests/integration
+*Assumptions I've made
+The capacity of entity 'Session' is at most 1.
+I have not added 'id' to the responses as it wouldn't look good sharing that information.
+*What I used AI for
+I used AI mostly for troubleshooting, creating mock data for the database, and tests. I used both Github Copilot and Claude AI.
+

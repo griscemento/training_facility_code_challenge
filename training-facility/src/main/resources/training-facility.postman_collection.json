@@ -1,0 +1,123 @@
+{
+	"info": {
+		"_postman_id": "381816b8-4288-447b-9a6a-9beaab1c629d",
+		"name": "Robin challenge",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "8573132"
+	},
+	"item": [
+		{
+			"name": "get all sessions",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:8080/api/v1/training-facility/sessions"
+			},
+			"response": []
+		},
+		{
+			"name": "get participant",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:8080/api/v1/training-facility/participants/2"
+			},
+			"response": []
+		},
+		{
+			"name": "create participant",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/v1/training-facility/create-participant?name=Gladys&email=gladys@example.com",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"training-facility",
+						"create-participant"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "Gladys"
+						},
+						{
+							"key": "email",
+							"value": "gladys@example.com"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "create coach",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": "http://localhost:8080/api/v1/training-facility/create-coach"
+			},
+			"response": []
+		},
+		{
+			"name": "create session",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{   \n    \"coachId\": \"3\",\n    \"startTime\":\"01/10/2026\",\n    \"endTime\":\"01/11/2026\",\n    \"capacity\":5,\n    \"location\":\"Quilmes Oeste\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8080/api/v1/training-facility/create-session"
+			},
+			"response": []
+		},
+		{
+			"name": "cancel registration",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{   \n    \"coachId\": \"3\",\n    \"startTime\":\"01/10/2026\",\n    \"endTime\":\"01/11/2026\",\n    \"capacity\":5,\n    \"location\":\"Quilmes Oeste\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8080/api/v1/training-facility/cancel-registration/1"
+			},
+			"response": []
+		},
+		{
+			"name": "cancel session",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{   \n    \"coachId\": \"3\",\n    \"startTime\":\"01/10/2026\",\n    \"endTime\":\"01/11/2026\",\n    \"capacity\":5,\n    \"location\":\"Quilmes Oeste\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8080/api/v1/training-facility/cancel-session/1"
+			},
+			"response": []
+		}
+	]
+}

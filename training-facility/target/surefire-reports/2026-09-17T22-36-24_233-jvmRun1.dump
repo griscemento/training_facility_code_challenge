@@ -1,0 +1,424 @@
+# Created at 2026-09-17T22:36:33.301
+Exiting self fork JVM. Received SHUTDOWN command from Maven shutdown hook.
+Thread dump before exiting the process (148895@mel-desktop):
+"main" 
+   java.lang.Thread.State: RUNNABLE
+        at java.base@17.0.11/sun.nio.ch.SocketDispatcher.read0(Native Method)
+        at java.base@17.0.11/sun.nio.ch.SocketDispatcher.read(SocketDispatcher.java:47)
+        at java.base@17.0.11/sun.nio.ch.IOUtil.readIntoNativeBuffer(IOUtil.java:330)
+        at java.base@17.0.11/sun.nio.ch.IOUtil.read(IOUtil.java:296)
+        at java.base@17.0.11/sun.nio.ch.IOUtil.read(IOUtil.java:259)
+        at java.base@17.0.11/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:417)
+        at java.base@17.0.11/sun.nio.ch.ChannelInputStream.read(ChannelInputStream.java:59)
+        at java.base@17.0.11/sun.nio.ch.ChannelInputStream.read(ChannelInputStream.java:107)
+        at java.base@17.0.11/sun.nio.ch.ChannelInputStream.read(ChannelInputStream.java:101)
+        at app//com.github.dockerjava.zerodep.shaded.org.apache.hc.core5.http.impl.io.SessionInputBufferImpl.fillBuffer(SessionInputBufferImpl.java:149)
+        at app//com.github.dockerjava.zerodep.shaded.org.apache.hc.core5.http.impl.io.SessionInputBufferImpl.readLine(SessionInputBufferImpl.java:280)
+        at app//com.github.dockerjava.zerodep.shaded.org.apache.hc.core5.http.impl.io.AbstractMessageParser.parse(AbstractMessageParser.java:250)
+        at app//com.github.dockerjava.zerodep.shaded.org.apache.hc.core5.http.impl.io.AbstractMessageParser.parse(AbstractMessageParser.java:56)
+        at app//com.github.dockerjava.zerodep.shaded.org.apache.hc.core5.http.impl.io.DefaultBHttpClientConnection.receiveResponseHeader(DefaultBHttpClientConnection.java:331)
+        at app//com.github.dockerjava.zerodep.shaded.org.apache.hc.core5.http.impl.io.HttpRequestExecutor.execute(HttpRequestExecutor.java:196)
+        at app//com.github.dockerjava.zerodep.HijackingHttpRequestExecutor.execute(HijackingHttpRequestExecutor.java:50)
+        at app//com.github.dockerjava.zerodep.shaded.org.apache.hc.client5.http.impl.classic.InternalExecRuntime.lambda$execute$0(InternalExecRuntime.java:236)
+        at app//com.github.dockerjava.zerodep.shaded.org.apache.hc.client5.http.impl.classic.InternalExecRuntime$$Lambda$1426/0x000072d1fc6969d8.execute(Unknown Source)
+        at app//com.github.dockerjava.zerodep.shaded.org.apache.hc.client5.http.impl.io.PoolingHttpClientConnectionManager$InternalConnectionEndpoint.execute(PoolingHttpClientConnectionManager.java:798)
+        at app//com.github.dockerjava.zerodep.shaded.org.apache.hc.client5.http.impl.classic.InternalExecRuntime.execute(InternalExecRuntime.java:233)
+        at app//com.github.dockerjava.zerodep.shaded.org.apache.hc.client5.http.impl.classic.MainClientExec.execute(MainClientExec.java:120)
+        at app//com.github.dockerjava.zerodep.shaded.org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+        at app//com.github.dockerjava.zerodep.shaded.org.apache.hc.client5.http.impl.classic.ExecChainElement$$Lambda$1420/0x000072d1fc689690.proceed(Unknown Source)
+        at app//com.github.dockerjava.zerodep.shaded.org.apache.hc.client5.http.impl.classic.ConnectExec.execute(ConnectExec.java:200)
+        at app//com.github.dockerjava.zerodep.shaded.org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+        at app//com.github.dockerjava.zerodep.shaded.org.apache.hc.client5.http.impl.classic.ExecChainElement$$Lambda$1420/0x000072d1fc689690.proceed(Unknown Source)
+        at app//com.github.dockerjava.zerodep.shaded.org.apache.hc.client5.http.impl.classic.ProtocolExec.execute(ProtocolExec.java:195)
+        at app//com.github.dockerjava.zerodep.shaded.org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+        at app//com.github.dockerjava.zerodep.shaded.org.apache.hc.client5.http.impl.classic.ExecChainElement$$Lambda$1420/0x000072d1fc689690.proceed(Unknown Source)
+        at app//com.github.dockerjava.zerodep.shaded.org.apache.hc.client5.http.impl.classic.ContentCompressionExec.execute(ContentCompressionExec.java:151)
+        at app//com.github.dockerjava.zerodep.shaded.org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+        at app//com.github.dockerjava.zerodep.shaded.org.apache.hc.client5.http.impl.classic.ExecChainElement$$Lambda$1420/0x000072d1fc689690.proceed(Unknown Source)
+        at app//com.github.dockerjava.zerodep.shaded.org.apache.hc.client5.http.impl.classic.HttpRequestRetryExec.execute(HttpRequestRetryExec.java:112)
+        at app//com.github.dockerjava.zerodep.shaded.org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+        at app//com.github.dockerjava.zerodep.shaded.org.apache.hc.client5.http.impl.classic.ExecChainElement$$Lambda$1420/0x000072d1fc689690.proceed(Unknown Source)
+        at app//com.github.dockerjava.zerodep.shaded.org.apache.hc.client5.http.impl.classic.RedirectExec.execute(RedirectExec.java:110)
+        at app//com.github.dockerjava.zerodep.shaded.org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+        at app//com.github.dockerjava.zerodep.shaded.org.apache.hc.client5.http.impl.classic.InternalHttpClient.doExecute(InternalHttpClient.java:185)
+        at app//com.github.dockerjava.zerodep.shaded.org.apache.hc.client5.http.impl.classic.CloseableHttpClient.execute(CloseableHttpClient.java:87)
+        at app//com.github.dockerjava.zerodep.shaded.org.apache.hc.client5.http.impl.classic.CloseableHttpClient.execute(CloseableHttpClient.java:55)
+        at app//com.github.dockerjava.zerodep.shaded.org.apache.hc.client5.http.classic.HttpClient.executeOpen(HttpClient.java:183)
+        at app//com.github.dockerjava.zerodep.ApacheDockerHttpClientImpl.execute(ApacheDockerHttpClientImpl.java:189)
+        at app//com.github.dockerjava.zerodep.ZerodepDockerHttpClient.execute(ZerodepDockerHttpClient.java:8)
+        at app//org.testcontainers.dockerclient.HeadersAddingDockerHttpClient.execute(HeadersAddingDockerHttpClient.java:23)
+        at app//org.testcontainers.shaded.com.github.dockerjava.core.DefaultInvocationBuilder.execute(DefaultInvocationBuilder.java:228)
+        at app//org.testcontainers.shaded.com.github.dockerjava.core.DefaultInvocationBuilder.get(DefaultInvocationBuilder.java:202)
+        at app//org.testcontainers.shaded.com.github.dockerjava.core.exec.PingCmdExec.execute(PingCmdExec.java:26)
+        at app//org.testcontainers.shaded.com.github.dockerjava.core.exec.PingCmdExec.execute(PingCmdExec.java:12)
+        at app//org.testcontainers.shaded.com.github.dockerjava.core.exec.AbstrSyncDockerCmdExec.exec(AbstrSyncDockerCmdExec.java:21)
+        at app//org.testcontainers.shaded.com.github.dockerjava.core.command.AbstrDockerCmd.exec(AbstrDockerCmd.java:33)
+        at app//org.testcontainers.dockerclient.DockerClientProviderStrategy.getClientForConfig(DockerClientProviderStrategy.java:421)
+        at app//org.testcontainers.dockerclient.DockerClientProviderStrategy.getDockerClient(DockerClientProviderStrategy.java:73)
+        at app//org.testcontainers.dockerclient.DockerClientProviderStrategy.tryOutStrategy(DockerClientProviderStrategy.java:289)
+        at app//org.testcontainers.dockerclient.DockerClientProviderStrategy.lambda$getFirstValidStrategy$5(DockerClientProviderStrategy.java:263)
+        at app//org.testcontainers.dockerclient.DockerClientProviderStrategy$$Lambda$1366/0x000072d1fc5d9218.test(Unknown Source)
+        at java.base@17.0.11/java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:178)
+        at java.base@17.0.11/java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:179)
+        at java.base@17.0.11/java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:179)
+        at java.base@17.0.11/java.util.ArrayList$ArrayListSpliterator.tryAdvance(ArrayList.java:1602)
+        at java.base@17.0.11/java.util.stream.ReferencePipeline.forEachWithCancel(ReferencePipeline.java:129)
+        at java.base@17.0.11/java.util.stream.AbstractPipeline.copyIntoWithCancel(AbstractPipeline.java:527)
+        at java.base@17.0.11/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:513)
+        at java.base@17.0.11/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499)
+        at java.base@17.0.11/java.util.stream.FindOps$FindOp.evaluateSequential(FindOps.java:150)
+        at java.base@17.0.11/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+        at java.base@17.0.11/java.util.stream.ReferencePipeline.findFirst(ReferencePipeline.java:647)
+        at app//org.testcontainers.dockerclient.DockerClientProviderStrategy.getFirstValidStrategy(DockerClientProviderStrategy.java:264)
+        at app//org.testcontainers.DockerClientFactory.getOrInitializeStrategy(DockerClientFactory.java:154)
+        at app//org.testcontainers.DockerClientFactory.client(DockerClientFactory.java:196)
+        at app//org.testcontainers.DockerClientFactory$1.getDockerClient(DockerClientFactory.java:108)
+        at app//com.github.dockerjava.api.DockerClientDelegate.authConfig(DockerClientDelegate.java:111)
+        at app//org.testcontainers.containers.GenericContainer.start(GenericContainer.java:316)
+        at app//org.springframework.boot.testcontainers.lifecycle.TestcontainersStartup.start(TestcontainersStartup.java:109)
+        at app//org.springframework.boot.testcontainers.lifecycle.TestcontainersStartup$1$$Lambda$1343/0x000072d1fc5545a0.accept(Unknown Source)
+        at java.base@17.0.11/java.lang.Iterable.forEach(Iterable.java:75)
+        at app//org.springframework.boot.testcontainers.lifecycle.TestcontainersStartup$1.start(TestcontainersStartup.java:50)
+        at app//org.springframework.boot.testcontainers.lifecycle.TestcontainersLifecycleBeanPostProcessor.start(TestcontainersLifecycleBeanPostProcessor.java:127)
+        at app//org.springframework.boot.testcontainers.lifecycle.TestcontainersLifecycleBeanPostProcessor.initializeStartables(TestcontainersLifecycleBeanPostProcessor.java:115)
+        at app//org.springframework.boot.testcontainers.lifecycle.TestcontainersLifecycleBeanPostProcessor.postProcessAfterInitialization(TestcontainersLifecycleBeanPostProcessor.java:88)
+        at app//org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyBeanPostProcessorsAfterInitialization(AbstractAutowireCapableBeanFactory.java:442)
+        at app//org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1818)
+        at app//org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:603)
+        at app//org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:525)
+        at app//org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:333)
+        at app//org.springframework.beans.factory.support.AbstractBeanFactory$$Lambda$991/0x000072d1fc32cb58.getObject(Unknown Source)
+        at app//org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:371)
+        at app//org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:331)
+        at app//org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:201)
+        at app//org.springframework.boot.testcontainers.service.connection.ServiceConnectionAutoConfigurationRegistrar.lambda$createSource$0(ServiceConnectionAutoConfigurationRegistrar.java:120)
+        at app//org.springframework.boot.testcontainers.service.connection.ServiceConnectionAutoConfigurationRegistrar$$Lambda$1148/0x000072d1fc47f108.get(Unknown Source)
+        at app//org.springframework.boot.testcontainers.service.connection.ContainerConnectionDetailsFactory$ContainerConnectionDetails.afterPropertiesSet(ContainerConnectionDetailsFactory.java:187)
+        at app//org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1862)
+        at app//org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1811)
+        at app//org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:603)
+        at app//org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:525)
+        at app//org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:333)
+        at app//org.springframework.beans.factory.support.AbstractBeanFactory$$Lambda$991/0x000072d1fc32cb58.getObject(Unknown Source)
+        at app//org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:371)
+        at app//org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:331)
+        at app//org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:201)
+
+"Reference Handler" 
+   java.lang.Thread.State: RUNNABLE
+        at java.base@17.0.11/java.lang.ref.Reference.waitForReferencePendingList(Native Method)
+        at java.base@17.0.11/java.lang.ref.Reference.processPendingReferences(Reference.java:253)
+        at java.base@17.0.11/java.lang.ref.Reference$ReferenceHandler.run(Reference.java:215)
+
+"Finalizer" 
+   java.lang.Thread.State: WAITING
+        at java.base@17.0.11/java.lang.Object.wait(Native Method)
+        at java.base@17.0.11/java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:155)
+        at java.base@17.0.11/java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:176)
+        at java.base@17.0.11/java.lang.ref.Finalizer$FinalizerThread.run(Finalizer.java:172)
+
+"Signal Dispatcher" 
+   java.lang.Thread.State: RUNNABLE
+
+"Notification Thread" 
+   java.lang.Thread.State: RUNNABLE
+
+"Common-Cleaner" 
+   java.lang.Thread.State: TIMED_WAITING
+        at java.base@17.0.11/java.lang.Object.wait(Native Method)
+        at java.base@17.0.11/java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:155)
+        at java.base@17.0.11/jdk.internal.ref.CleanerImpl.run(CleanerImpl.java:140)
+        at java.base@17.0.11/java.lang.Thread.run(Thread.java:840)
+        at java.base@17.0.11/jdk.internal.misc.InnocuousThread.run(InnocuousThread.java:162)
+
+"surefire-forkedjvm-stream-flusher" 
+   java.lang.Thread.State: TIMED_WAITING
+        at java.base@17.0.11/jdk.internal.misc.Unsafe.park(Native Method)
+        at java.base@17.0.11/java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:252)
+        at java.base@17.0.11/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:1674)
+        at java.base@17.0.11/java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:1182)
+        at java.base@17.0.11/java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:899)
+        at java.base@17.0.11/java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1062)
+        at java.base@17.0.11/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1122)
+        at java.base@17.0.11/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+        at java.base@17.0.11/java.lang.Thread.run(Thread.java:840)
+
+"surefire-forkedjvm-command-thread" 
+   java.lang.Thread.State: RUNNABLE
+        at java.management@17.0.11/sun.management.ThreadImpl.getThreadInfo1(Native Method)
+        at java.management@17.0.11/sun.management.ThreadImpl.getThreadInfo(ThreadImpl.java:197)
+        at app//org.apache.maven.surefire.booter.ForkedBooter.generateThreadDump(ForkedBooter.java:579)
+        at app//org.apache.maven.surefire.booter.ForkedBooter.access$600(ForkedBooter.java:79)
+        at app//org.apache.maven.surefire.booter.ForkedBooter$4.update(ForkedBooter.java:315)
+        at app//org.apache.maven.surefire.booter.CommandReader$CommandRunnable.callListeners(CommandReader.java:357)
+        at app//org.apache.maven.surefire.booter.CommandReader$CommandRunnable.exitByConfiguration(CommandReader.java:367)
+        at app//org.apache.maven.surefire.booter.CommandReader$CommandRunnable.run(CommandReader.java:330)
+        at java.base@17.0.11/java.lang.Thread.run(Thread.java:840)
+
+"process reaper" 
+   java.lang.Thread.State: TIMED_WAITING
+        at java.base@17.0.11/jdk.internal.misc.Unsafe.park(Native Method)
+        at java.base@17.0.11/java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:252)
+        at java.base@17.0.11/java.util.concurrent.SynchronousQueue$TransferStack.transfer(SynchronousQueue.java:401)
+        at java.base@17.0.11/java.util.concurrent.SynchronousQueue.poll(SynchronousQueue.java:903)
+        at java.base@17.0.11/java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1061)
+        at java.base@17.0.11/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1122)
+        at java.base@17.0.11/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+        at java.base@17.0.11/java.lang.Thread.run(Thread.java:840)
+
+"JNA Cleaner" 
+   java.lang.Thread.State: TIMED_WAITING
+        at java.base@17.0.11/java.lang.Object.wait(Native Method)
+        at java.base@17.0.11/java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:155)
+        at app//com.sun.jna.internal.Cleaner$CleanerThread.run(Cleaner.java:154)
+
+"SIGINT handler" 
+   java.lang.Thread.State: WAITING
+        at java.base@17.0.11/java.lang.Object.wait(Native Method)
+        at java.base@17.0.11/java.lang.Thread.join(Thread.java:1313)
+        at java.base@17.0.11/java.lang.Thread.join(Thread.java:1381)
+        at java.base@17.0.11/java.lang.ApplicationShutdownHooks.runHooks(ApplicationShutdownHooks.java:107)
+        at java.base@17.0.11/java.lang.ApplicationShutdownHooks$1.run(ApplicationShutdownHooks.java:46)
+        at java.base@17.0.11/java.lang.Shutdown.runHooks(Shutdown.java:130)
+        at java.base@17.0.11/java.lang.Shutdown.exit(Shutdown.java:173)
+        at java.base@17.0.11/java.lang.Terminator$1.handle(Terminator.java:51)
+        at java.base@17.0.11/jdk.internal.misc.Signal$1.run(Signal.java:219)
+        at java.base@17.0.11/java.lang.Thread.run(Thread.java:840)
+
+"SpringApplicationShutdownHook" 
+   java.lang.Thread.State: TIMED_WAITING
+        at java.base@17.0.11/jdk.internal.misc.Unsafe.park(Native Method)
+        at java.base@17.0.11/java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:252)
+        at java.base@17.0.11/java.util.concurrent.locks.AbstractQueuedSynchronizer.acquire(AbstractQueuedSynchronizer.java:717)
+        at java.base@17.0.11/java.util.concurrent.locks.AbstractQueuedSynchronizer.tryAcquireNanos(AbstractQueuedSynchronizer.java:986)
+        at java.base@17.0.11/java.util.concurrent.locks.ReentrantLock$Sync.tryLockNanos(ReentrantLock.java:168)
+        at java.base@17.0.11/java.util.concurrent.locks.ReentrantLock.tryLock(ReentrantLock.java:479)
+        at app//org.springframework.context.support.AbstractApplicationContext.tryLockForShutdown(AbstractApplicationContext.java:1096)
+        at app//org.springframework.context.support.AbstractApplicationContext.close(AbstractApplicationContext.java:1146)
+        at app//org.springframework.boot.SpringApplicationShutdownHook.closeAndWait(SpringApplicationShutdownHook.java:147)
+        at app//org.springframework.boot.SpringApplicationShutdownHook$$Lambda$1427/0x000072d1fc6970a0.accept(Unknown Source)
+        at java.base@17.0.11/java.lang.Iterable.forEach(Iterable.java:75)
+        at app//org.springframework.boot.SpringApplicationShutdownHook.run(SpringApplicationShutdownHook.java:116)
+        at java.base@17.0.11/java.lang.Thread.run(Thread.java:840)
+
+
+
+# Created at 2026-09-17T22:37:03.306
+Thread dump for process (148895@mel-desktop) after 30 seconds shutdown timeout:
+"main" 
+   java.lang.Thread.State: RUNNABLE
+        at java.base@17.0.11/sun.nio.ch.SocketDispatcher.read0(Native Method)
+        at java.base@17.0.11/sun.nio.ch.SocketDispatcher.read(SocketDispatcher.java:47)
+        at java.base@17.0.11/sun.nio.ch.IOUtil.readIntoNativeBuffer(IOUtil.java:330)
+        at java.base@17.0.11/sun.nio.ch.IOUtil.read(IOUtil.java:296)
+        at java.base@17.0.11/sun.nio.ch.IOUtil.read(IOUtil.java:259)
+        at java.base@17.0.11/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:417)
+        at java.base@17.0.11/sun.nio.ch.ChannelInputStream.read(ChannelInputStream.java:59)
+        at java.base@17.0.11/sun.nio.ch.ChannelInputStream.read(ChannelInputStream.java:107)
+        at java.base@17.0.11/sun.nio.ch.ChannelInputStream.read(ChannelInputStream.java:101)
+        at app//com.github.dockerjava.zerodep.shaded.org.apache.hc.core5.http.impl.io.SessionInputBufferImpl.fillBuffer(SessionInputBufferImpl.java:149)
+        at app//com.github.dockerjava.zerodep.shaded.org.apache.hc.core5.http.impl.io.SessionInputBufferImpl.readLine(SessionInputBufferImpl.java:280)
+        at app//com.github.dockerjava.zerodep.shaded.org.apache.hc.core5.http.impl.io.AbstractMessageParser.parse(AbstractMessageParser.java:250)
+        at app//com.github.dockerjava.zerodep.shaded.org.apache.hc.core5.http.impl.io.AbstractMessageParser.parse(AbstractMessageParser.java:56)
+        at app//com.github.dockerjava.zerodep.shaded.org.apache.hc.core5.http.impl.io.DefaultBHttpClientConnection.receiveResponseHeader(DefaultBHttpClientConnection.java:331)
+        at app//com.github.dockerjava.zerodep.shaded.org.apache.hc.core5.http.impl.io.HttpRequestExecutor.execute(HttpRequestExecutor.java:196)
+        at app//com.github.dockerjava.zerodep.HijackingHttpRequestExecutor.execute(HijackingHttpRequestExecutor.java:50)
+        at app//com.github.dockerjava.zerodep.shaded.org.apache.hc.client5.http.impl.classic.InternalExecRuntime.lambda$execute$0(InternalExecRuntime.java:236)
+        at app//com.github.dockerjava.zerodep.shaded.org.apache.hc.client5.http.impl.classic.InternalExecRuntime$$Lambda$1426/0x000072d1fc6969d8.execute(Unknown Source)
+        at app//com.github.dockerjava.zerodep.shaded.org.apache.hc.client5.http.impl.io.PoolingHttpClientConnectionManager$InternalConnectionEndpoint.execute(PoolingHttpClientConnectionManager.java:798)
+        at app//com.github.dockerjava.zerodep.shaded.org.apache.hc.client5.http.impl.classic.InternalExecRuntime.execute(InternalExecRuntime.java:233)
+        at app//com.github.dockerjava.zerodep.shaded.org.apache.hc.client5.http.impl.classic.MainClientExec.execute(MainClientExec.java:120)
+        at app//com.github.dockerjava.zerodep.shaded.org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+        at app//com.github.dockerjava.zerodep.shaded.org.apache.hc.client5.http.impl.classic.ExecChainElement$$Lambda$1420/0x000072d1fc689690.proceed(Unknown Source)
+        at app//com.github.dockerjava.zerodep.shaded.org.apache.hc.client5.http.impl.classic.ConnectExec.execute(ConnectExec.java:200)
+        at app//com.github.dockerjava.zerodep.shaded.org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+        at app//com.github.dockerjava.zerodep.shaded.org.apache.hc.client5.http.impl.classic.ExecChainElement$$Lambda$1420/0x000072d1fc689690.proceed(Unknown Source)
+        at app//com.github.dockerjava.zerodep.shaded.org.apache.hc.client5.http.impl.classic.ProtocolExec.execute(ProtocolExec.java:195)
+        at app//com.github.dockerjava.zerodep.shaded.org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+        at app//com.github.dockerjava.zerodep.shaded.org.apache.hc.client5.http.impl.classic.ExecChainElement$$Lambda$1420/0x000072d1fc689690.proceed(Unknown Source)
+        at app//com.github.dockerjava.zerodep.shaded.org.apache.hc.client5.http.impl.classic.ContentCompressionExec.execute(ContentCompressionExec.java:151)
+        at app//com.github.dockerjava.zerodep.shaded.org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+        at app//com.github.dockerjava.zerodep.shaded.org.apache.hc.client5.http.impl.classic.ExecChainElement$$Lambda$1420/0x000072d1fc689690.proceed(Unknown Source)
+        at app//com.github.dockerjava.zerodep.shaded.org.apache.hc.client5.http.impl.classic.HttpRequestRetryExec.execute(HttpRequestRetryExec.java:112)
+        at app//com.github.dockerjava.zerodep.shaded.org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+        at app//com.github.dockerjava.zerodep.shaded.org.apache.hc.client5.http.impl.classic.ExecChainElement$$Lambda$1420/0x000072d1fc689690.proceed(Unknown Source)
+        at app//com.github.dockerjava.zerodep.shaded.org.apache.hc.client5.http.impl.classic.RedirectExec.execute(RedirectExec.java:110)
+        at app//com.github.dockerjava.zerodep.shaded.org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+        at app//com.github.dockerjava.zerodep.shaded.org.apache.hc.client5.http.impl.classic.InternalHttpClient.doExecute(InternalHttpClient.java:185)
+        at app//com.github.dockerjava.zerodep.shaded.org.apache.hc.client5.http.impl.classic.CloseableHttpClient.execute(CloseableHttpClient.java:87)
+        at app//com.github.dockerjava.zerodep.shaded.org.apache.hc.client5.http.impl.classic.CloseableHttpClient.execute(CloseableHttpClient.java:55)
+        at app//com.github.dockerjava.zerodep.shaded.org.apache.hc.client5.http.classic.HttpClient.executeOpen(HttpClient.java:183)
+        at app//com.github.dockerjava.zerodep.ApacheDockerHttpClientImpl.execute(ApacheDockerHttpClientImpl.java:189)
+        at app//com.github.dockerjava.zerodep.ZerodepDockerHttpClient.execute(ZerodepDockerHttpClient.java:8)
+        at app//org.testcontainers.dockerclient.HeadersAddingDockerHttpClient.execute(HeadersAddingDockerHttpClient.java:23)
+        at app//org.testcontainers.shaded.com.github.dockerjava.core.DefaultInvocationBuilder.execute(DefaultInvocationBuilder.java:228)
+        at app//org.testcontainers.shaded.com.github.dockerjava.core.DefaultInvocationBuilder.get(DefaultInvocationBuilder.java:202)
+        at app//org.testcontainers.shaded.com.github.dockerjava.core.exec.PingCmdExec.execute(PingCmdExec.java:26)
+        at app//org.testcontainers.shaded.com.github.dockerjava.core.exec.PingCmdExec.execute(PingCmdExec.java:12)
+        at app//org.testcontainers.shaded.com.github.dockerjava.core.exec.AbstrSyncDockerCmdExec.exec(AbstrSyncDockerCmdExec.java:21)
+        at app//org.testcontainers.shaded.com.github.dockerjava.core.command.AbstrDockerCmd.exec(AbstrDockerCmd.java:33)
+        at app//org.testcontainers.dockerclient.DockerClientProviderStrategy.getClientForConfig(DockerClientProviderStrategy.java:421)
+        at app//org.testcontainers.dockerclient.DockerClientProviderStrategy.getDockerClient(DockerClientProviderStrategy.java:73)
+        at app//org.testcontainers.dockerclient.DockerClientProviderStrategy.tryOutStrategy(DockerClientProviderStrategy.java:289)
+        at app//org.testcontainers.dockerclient.DockerClientProviderStrategy.lambda$getFirstValidStrategy$5(DockerClientProviderStrategy.java:263)
+        at app//org.testcontainers.dockerclient.DockerClientProviderStrategy$$Lambda$1366/0x000072d1fc5d9218.test(Unknown Source)
+        at java.base@17.0.11/java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:178)
+        at java.base@17.0.11/java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:179)
+        at java.base@17.0.11/java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:179)
+        at java.base@17.0.11/java.util.ArrayList$ArrayListSpliterator.tryAdvance(ArrayList.java:1602)
+        at java.base@17.0.11/java.util.stream.ReferencePipeline.forEachWithCancel(ReferencePipeline.java:129)
+        at java.base@17.0.11/java.util.stream.AbstractPipeline.copyIntoWithCancel(AbstractPipeline.java:527)
+        at java.base@17.0.11/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:513)
+        at java.base@17.0.11/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499)
+        at java.base@17.0.11/java.util.stream.FindOps$FindOp.evaluateSequential(FindOps.java:150)
+        at java.base@17.0.11/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+        at java.base@17.0.11/java.util.stream.ReferencePipeline.findFirst(ReferencePipeline.java:647)
+        at app//org.testcontainers.dockerclient.DockerClientProviderStrategy.getFirstValidStrategy(DockerClientProviderStrategy.java:264)
+        at app//org.testcontainers.DockerClientFactory.getOrInitializeStrategy(DockerClientFactory.java:154)
+        at app//org.testcontainers.DockerClientFactory.client(DockerClientFactory.java:196)
+        at app//org.testcontainers.DockerClientFactory$1.getDockerClient(DockerClientFactory.java:108)
+        at app//com.github.dockerjava.api.DockerClientDelegate.authConfig(DockerClientDelegate.java:111)
+        at app//org.testcontainers.containers.GenericContainer.start(GenericContainer.java:316)
+        at app//org.springframework.boot.testcontainers.lifecycle.TestcontainersStartup.start(TestcontainersStartup.java:109)
+        at app//org.springframework.boot.testcontainers.lifecycle.TestcontainersStartup$1$$Lambda$1343/0x000072d1fc5545a0.accept(Unknown Source)
+        at java.base@17.0.11/java.lang.Iterable.forEach(Iterable.java:75)
+        at app//org.springframework.boot.testcontainers.lifecycle.TestcontainersStartup$1.start(TestcontainersStartup.java:50)
+        at app//org.springframework.boot.testcontainers.lifecycle.TestcontainersLifecycleBeanPostProcessor.start(TestcontainersLifecycleBeanPostProcessor.java:127)
+        at app//org.springframework.boot.testcontainers.lifecycle.TestcontainersLifecycleBeanPostProcessor.initializeStartables(TestcontainersLifecycleBeanPostProcessor.java:115)
+        at app//org.springframework.boot.testcontainers.lifecycle.TestcontainersLifecycleBeanPostProcessor.postProcessAfterInitialization(TestcontainersLifecycleBeanPostProcessor.java:88)
+        at app//org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyBeanPostProcessorsAfterInitialization(AbstractAutowireCapableBeanFactory.java:442)
+        at app//org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1818)
+        at app//org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:603)
+        at app//org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:525)
+        at app//org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:333)
+        at app//org.springframework.beans.factory.support.AbstractBeanFactory$$Lambda$991/0x000072d1fc32cb58.getObject(Unknown Source)
+        at app//org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:371)
+        at app//org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:331)
+        at app//org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:201)
+        at app//org.springframework.boot.testcontainers.service.connection.ServiceConnectionAutoConfigurationRegistrar.lambda$createSource$0(ServiceConnectionAutoConfigurationRegistrar.java:120)
+        at app//org.springframework.boot.testcontainers.service.connection.ServiceConnectionAutoConfigurationRegistrar$$Lambda$1148/0x000072d1fc47f108.get(Unknown Source)
+        at app//org.springframework.boot.testcontainers.service.connection.ContainerConnectionDetailsFactory$ContainerConnectionDetails.afterPropertiesSet(ContainerConnectionDetailsFactory.java:187)
+        at app//org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1862)
+        at app//org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1811)
+        at app//org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:603)
+        at app//org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:525)
+        at app//org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:333)
+        at app//org.springframework.beans.factory.support.AbstractBeanFactory$$Lambda$991/0x000072d1fc32cb58.getObject(Unknown Source)
+        at app//org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:371)
+        at app//org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:331)
+        at app//org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:201)
+
+"Reference Handler" 
+   java.lang.Thread.State: RUNNABLE
+        at java.base@17.0.11/java.lang.ref.Reference.waitForReferencePendingList(Native Method)
+        at java.base@17.0.11/java.lang.ref.Reference.processPendingReferences(Reference.java:253)
+        at java.base@17.0.11/java.lang.ref.Reference$ReferenceHandler.run(Reference.java:215)
+
+"Finalizer" 
+   java.lang.Thread.State: WAITING
+        at java.base@17.0.11/java.lang.Object.wait(Native Method)
+        at java.base@17.0.11/java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:155)
+        at java.base@17.0.11/java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:176)
+        at java.base@17.0.11/java.lang.ref.Finalizer$FinalizerThread.run(Finalizer.java:172)
+
+"Signal Dispatcher" 
+   java.lang.Thread.State: RUNNABLE
+
+"Notification Thread" 
+   java.lang.Thread.State: RUNNABLE
+
+"Common-Cleaner" 
+   java.lang.Thread.State: TIMED_WAITING
+        at java.base@17.0.11/java.lang.Object.wait(Native Method)
+        at java.base@17.0.11/java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:155)
+        at java.base@17.0.11/jdk.internal.ref.CleanerImpl.run(CleanerImpl.java:140)
+        at java.base@17.0.11/java.lang.Thread.run(Thread.java:840)
+        at java.base@17.0.11/jdk.internal.misc.InnocuousThread.run(InnocuousThread.java:162)
+
+"surefire-forkedjvm-stream-flusher" 
+   java.lang.Thread.State: TIMED_WAITING
+        at java.base@17.0.11/jdk.internal.misc.Unsafe.park(Native Method)
+        at java.base@17.0.11/java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:252)
+        at java.base@17.0.11/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:1674)
+        at java.base@17.0.11/java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:1182)
+        at java.base@17.0.11/java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:899)
+        at java.base@17.0.11/java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1062)
+        at java.base@17.0.11/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1122)
+        at java.base@17.0.11/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+        at java.base@17.0.11/java.lang.Thread.run(Thread.java:840)
+
+"surefire-forkedjvm-command-thread" 
+   java.lang.Thread.State: BLOCKED
+        at java.base@17.0.11/java.lang.Shutdown.exit(Shutdown.java:172)
+        at java.base@17.0.11/java.lang.Runtime.exit(Runtime.java:115)
+        at java.base@17.0.11/java.lang.System.exit(System.java:1864)
+        at app//org.apache.maven.surefire.booter.ForkedBooter.exit1(ForkedBooter.java:362)
+        at app//org.apache.maven.surefire.booter.ForkedBooter.access$1000(ForkedBooter.java:79)
+        at app//org.apache.maven.surefire.booter.ForkedBooter$4.update(ForkedBooter.java:317)
+        at app//org.apache.maven.surefire.booter.CommandReader$CommandRunnable.callListeners(CommandReader.java:357)
+        at app//org.apache.maven.surefire.booter.CommandReader$CommandRunnable.exitByConfiguration(CommandReader.java:367)
+        at app//org.apache.maven.surefire.booter.CommandReader$CommandRunnable.run(CommandReader.java:330)
+        at java.base@17.0.11/java.lang.Thread.run(Thread.java:840)
+
+"process reaper" 
+   java.lang.Thread.State: TIMED_WAITING
+        at java.base@17.0.11/jdk.internal.misc.Unsafe.park(Native Method)
+        at java.base@17.0.11/java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:252)
+        at java.base@17.0.11/java.util.concurrent.SynchronousQueue$TransferStack.transfer(SynchronousQueue.java:401)
+        at java.base@17.0.11/java.util.concurrent.SynchronousQueue.poll(SynchronousQueue.java:903)
+        at java.base@17.0.11/java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1061)
+        at java.base@17.0.11/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1122)
+        at java.base@17.0.11/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+        at java.base@17.0.11/java.lang.Thread.run(Thread.java:840)
+
+"JNA Cleaner" 
+   java.lang.Thread.State: TIMED_WAITING
+        at java.base@17.0.11/java.lang.Object.wait(Native Method)
+        at java.base@17.0.11/java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:155)
+        at app//com.sun.jna.internal.Cleaner$CleanerThread.run(Cleaner.java:154)
+
+"SIGINT handler" 
+   java.lang.Thread.State: WAITING
+        at java.base@17.0.11/java.lang.Object.wait(Native Method)
+        at java.base@17.0.11/java.lang.Thread.join(Thread.java:1313)
+        at java.base@17.0.11/java.lang.Thread.join(Thread.java:1381)
+        at java.base@17.0.11/java.lang.ApplicationShutdownHooks.runHooks(ApplicationShutdownHooks.java:107)
+        at java.base@17.0.11/java.lang.ApplicationShutdownHooks$1.run(ApplicationShutdownHooks.java:46)
+        at java.base@17.0.11/java.lang.Shutdown.runHooks(Shutdown.java:130)
+        at java.base@17.0.11/java.lang.Shutdown.exit(Shutdown.java:173)
+        at java.base@17.0.11/java.lang.Terminator$1.handle(Terminator.java:51)
+        at java.base@17.0.11/jdk.internal.misc.Signal$1.run(Signal.java:219)
+        at java.base@17.0.11/java.lang.Thread.run(Thread.java:840)
+
+"SpringApplicationShutdownHook" 
+   java.lang.Thread.State: TIMED_WAITING
+        at java.base@17.0.11/jdk.internal.misc.Unsafe.park(Native Method)
+        at java.base@17.0.11/java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:252)
+        at java.base@17.0.11/java.util.concurrent.locks.AbstractQueuedSynchronizer.acquire(AbstractQueuedSynchronizer.java:717)
+        at java.base@17.0.11/java.util.concurrent.locks.AbstractQueuedSynchronizer.tryAcquireNanos(AbstractQueuedSynchronizer.java:986)
+        at java.base@17.0.11/java.util.concurrent.locks.ReentrantLock$Sync.tryLockNanos(ReentrantLock.java:168)
+        at java.base@17.0.11/java.util.concurrent.locks.ReentrantLock.tryLock(ReentrantLock.java:479)
+        at app//org.springframework.context.support.AbstractApplicationContext.tryLockForShutdown(AbstractApplicationContext.java:1096)
+        at app//org.springframework.context.support.AbstractApplicationContext.close(AbstractApplicationContext.java:1146)
+        at app//org.springframework.boot.SpringApplicationShutdownHook.closeAndWait(SpringApplicationShutdownHook.java:147)
+        at app//org.springframework.boot.SpringApplicationShutdownHook$$Lambda$1427/0x000072d1fc6970a0.accept(Unknown Source)
+        at java.base@17.0.11/java.lang.Iterable.forEach(Iterable.java:75)
+        at app//org.springframework.boot.SpringApplicationShutdownHook.run(SpringApplicationShutdownHook.java:116)
+        at java.base@17.0.11/java.lang.Thread.run(Thread.java:840)
+
+"surefire-forkedjvm-last-ditch-daemon-shutdown-thread-30s" 
+   java.lang.Thread.State: RUNNABLE
+        at java.management@17.0.11/sun.management.ThreadImpl.getThreadInfo1(Native Method)
+        at java.management@17.0.11/sun.management.ThreadImpl.getThreadInfo(ThreadImpl.java:197)
+        at app//org.apache.maven.surefire.booter.ForkedBooter.generateThreadDump(ForkedBooter.java:579)
+        at app//org.apache.maven.surefire.booter.ForkedBooter.access$600(ForkedBooter.java:79)
+        at app//org.apache.maven.surefire.booter.ForkedBooter$7.run(ForkedBooter.java:424)
+        at java.base@17.0.11/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+        at java.base@17.0.11/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+        at java.base@17.0.11/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:304)
+        at java.base@17.0.11/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+        at java.base@17.0.11/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+        at java.base@17.0.11/java.lang.Thread.run(Thread.java:840)
+
+
+

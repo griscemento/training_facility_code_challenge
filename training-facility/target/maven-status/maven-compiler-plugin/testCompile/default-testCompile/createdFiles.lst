@@ -1,0 +1,5 @@
+com/vinci/training_facility/TestcontainersConfiguration.class
+com/vinci/training_facility/integration/TrainingFacilityIntegrationTest.class
+com/vinci/training_facility/TestTrainingFacilityApplication.class
+com/vinci/training_facility/service/TrainingFacilityServiceImplTest.class
+com/vinci/training_facility/TrainingFacilityApplicationTests.class
